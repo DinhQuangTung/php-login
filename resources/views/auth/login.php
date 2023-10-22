@@ -15,7 +15,7 @@
     <div class="shape"></div>
     <div class="shape"></div>
 </div>
-<form>
+<form method="post" action="/login">
     <h3>Login Here</h3>
 
     <label for="username">Username</label>
@@ -23,12 +23,11 @@
 
     <label for="password">Password</label>
     <input type="password" placeholder="Password" id="password">
-
+    <label for="remember_me" style="display: flex; align-items: center; margin-top: 20px; height: 20px">
+        <input type="checkbox" name="remember_me" id="remember_me" style="width: 20px;">
+        <p>Remember Me</p>
+    </label>
     <button>Log In</button>
-    <div class="social">
-        <div class="go"><i class="fab fa-google"></i>  Google</div>
-        <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-    </div>
 </form>
 </body>
 </html>

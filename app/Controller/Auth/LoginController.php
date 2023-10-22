@@ -3,15 +3,15 @@
 namespace App\Controller\Auth;
 
 use app\Services\Interfaces\LoginServiceInterface;
-use App\Services\LoginService;
+use App\Services\SessionLoginService;
 
 class LoginController
 {
     protected LoginServiceInterface $loginServiceInterface;
 
-    public function __construct(LoginServiceInterface $loginServiceInterface)
+    public function __construct()
     {
-        $this->loginServiceInterface = $loginServiceInterface;
+        $this->loginServiceInterface = new SessionLoginService();
     }
 
     /**
@@ -24,7 +24,12 @@ class LoginController
 
     public function login()
     {
-        $loginService = new LoginService();
-        $loginService->login();
+        $data = [
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
+            'remember' => $_POST['remember_me'] ?? 0,
+        ];
+
+
     }
 }

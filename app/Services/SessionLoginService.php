@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Services\Interfaces\LoginServiceInterface;
-class LoginService implements LoginServiceInterface
+class SessionLoginService implements LoginServiceInterface
 {
     public function __construct()
     {
