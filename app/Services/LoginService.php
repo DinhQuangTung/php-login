@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Services;
-class LoginService
+
+use App\Services\Interfaces\LoginServiceInterface;
+class LoginService implements LoginServiceInterface
 {
     public function __construct()
     {
@@ -11,5 +13,10 @@ class LoginService
     public function index(): string
     {
         return 'LoginService@index';
+    }
+
+    public function login(): mixed
+    {
+        // TODO: Implement login() method.
     }
 }
